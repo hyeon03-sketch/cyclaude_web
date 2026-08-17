@@ -30,8 +30,8 @@ a{color:inherit;text-decoration:none}
 header{background:#fff;border-bottom:3px solid var(--navy);position:sticky;top:0;z-index:60;box-shadow:0 2px 10px rgba(0,0,0,.04)}
 .nav{display:flex;align-items:center;height:84px;gap:40px}
 .brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
-.crest{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1a4f9c,#00205b);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:22px}
-.brand .bt{font-family:Georgia,serif;font-weight:700;font-size:21px;color:var(--navy);line-height:1.05}
+.crest{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1a4f9c,#00205b);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.brand .bt{font-weight:700;font-size:21px;color:var(--navy);line-height:1.05}
 .brand .bs{font-size:11px;color:var(--sub);letter-spacing:.06em;text-transform:uppercase}
 .menu{display:flex;gap:6px;margin-left:auto}
 .menu>a{font-size:15.5px;font-weight:700;color:#25324a;padding:30px 16px;position:relative}
@@ -43,11 +43,11 @@ header{background:#fff;border-bottom:3px solid var(--navy);position:sticky;top:0
 .hero{position:relative;color:#fff;overflow:hidden;background:
   linear-gradient(100deg,rgba(0,26,73,.92) 0%,rgba(0,32,91,.78) 45%,rgba(26,79,156,.55) 100%),
   repeating-linear-gradient(115deg,#123a75 0 46px,#0e3268 46px 92px);
-  min-height:430px;display:flex;align-items:center}
-.hero .wrap{padding-top:52px;padding-bottom:64px;width:100%}
+  min-height:340px;display:flex;align-items:center}
+.hero .wrap{padding-top:36px;padding-bottom:42px;width:100%}
 .hero .kick{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:3px}
-.hero h1{font-family:Georgia,serif;font-size:50px;line-height:1.08;margin:18px 0 12px;max-width:16ch}
-.hero p{font-size:18px;color:#dbe6f5;max-width:58ch}
+.hero h1{font-family:Georgia,serif;font-size:40px;line-height:1.1;margin:14px 0 9px;max-width:18ch}
+.hero p{font-size:16px;color:#dbe6f5;max-width:58ch}
 .hero .kr{font-size:14px;color:#9fb9dd;margin-top:6px}
 .searchbar{margin-top:28px;display:flex;max-width:640px;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 14px 34px rgba(0,10,30,.35)}
 .searchbar input{flex:1;border:none;outline:none;padding:17px 18px;font-size:15px;color:var(--ink)}
@@ -60,10 +60,9 @@ header{background:#fff;border-bottom:3px solid var(--navy);position:sticky;top:0
 /* ── quick icon menu (OIA style) ── */
 .quick{background:#fff;border-bottom:1px solid var(--line)}
 .quick .wrap{display:grid;grid-template-columns:repeat(6,1fr)}
-.qi{display:flex;flex-direction:column;align-items:center;gap:9px;padding:26px 8px;border-left:1px solid var(--line);font-size:13.5px;font-weight:700;color:#2b3948;transition:.13s}
+.qi{display:flex;flex-direction:column;align-items:center;gap:7px;padding:16px 8px;border-left:1px solid var(--line);font-size:13.5px;font-weight:700;color:#2b3948;transition:.13s}
 .qi:first-child{border-left:none}
 .qi:hover{background:var(--sky);color:var(--navy)}
-.qi .ic{width:52px;height:52px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;font-size:23px}
 
 /* ── alert strip ── */
 .alert{background:#fff6f0;border-bottom:1px solid #f2ddc9}
@@ -73,8 +72,8 @@ header{background:#fff;border-bottom:3px solid var(--navy);position:sticky;top:0
 .alert .dday{margin-left:auto;color:var(--red);font-weight:800;white-space:nowrap}
 
 /* ── sections ── */
-section{padding:58px 0}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px;flex-wrap:wrap;gap:10px}
+section{padding:40px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
 .sec-head h2{font-family:Georgia,serif;font-size:29px;color:var(--navy)}
 .sec-head h2:before{content:"";display:inline-block;width:26px;height:4px;background:var(--red);margin-right:12px;vertical-align:middle}
 .sec-head .more{font-size:13.5px;color:var(--blue);font-weight:700;border:1px solid #c8d6ea;border-radius:20px;padding:7px 16px}
@@ -90,12 +89,15 @@ section{padding:58px 0}
 .board li{display:flex;align-items:center;gap:13px;padding:15px 20px;border-bottom:1px solid var(--line);cursor:pointer}
 .board li:hover{background:#f8fafc}
 .board li:last-child{border-bottom:none}
-.badge{font-size:11px;font-weight:800;padding:3px 9px;border-radius:3px;white-space:nowrap;border:1px solid}
-.b-aca{color:var(--blue);border-color:#bcd0ea;background:#f0f5fc}
-.b-visa{color:var(--red);border-color:#ecc4c0;background:#fdf1f0}
-.b-eve{color:#1f7a58;border-color:#bfdccf;background:#effaf4}
+.badge{font-size:11px;font-weight:800;white-space:nowrap;letter-spacing:.02em}
+.badge:before{content:"● ";font-size:7px}
+.b-aca{color:var(--blue)}
+.b-visa{color:var(--red)}
+.b-eve{color:#1f7a58}
 .board li .t{flex:1;font-size:14.5px;font-weight:600;color:#22303e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .board li .d{color:var(--sub);font-size:12.5px;white-space:nowrap}
+.cal{font-size:11px;color:var(--blue);font-weight:700;white-space:nowrap;margin-left:4px}
+.cal:hover{text-decoration:underline}
 
 /* news cards */
 .news{display:flex;flex-direction:column;gap:16px}
@@ -121,19 +123,30 @@ section{padding:58px 0}
 .ai-run{width:100%;margin-top:16px;background:var(--navy);color:#fff;border:none;border-radius:6px;padding:14px;font-size:15px;font-weight:800;cursor:pointer}
 .ai-run:hover{background:var(--blue)}
 .ai-run:disabled{opacity:.6;cursor:wait}
-.ai-out{margin-top:16px;display:flex;flex-direction:column;gap:10px}
-.pick{border:1px solid var(--line);border-left:4px solid var(--red);border-radius:6px;padding:12px 14px;background:#fbfcfe}
+.ai-out{margin-top:16px;display:flex;flex-direction:column}
+.pick{border-left:3px solid var(--red);border-bottom:1px solid var(--line);padding:10px 0 10px 14px}
+.pick:last-child{border-bottom:none}
 .pick b{font-size:14px;color:#22303e;display:block}
 .pick .why{font-size:13px;color:var(--sub);margin-top:3px}
 .pick .dl{font-size:12px;color:var(--red);font-weight:700;margin-top:4px;display:block}
 .ai-mode{font-size:11.5px;color:#9aa7b4;text-align:right;margin-top:6px}
+
+/* ── FAQ (native accordion, compact) ── */
+.faq{display:flex;flex-direction:column}
+.faq details{border-bottom:1px solid var(--line);padding:14px 2px}
+.faq summary{cursor:pointer;font-weight:700;font-size:15px;color:#22303e;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:before{content:"+ ";color:var(--red);font-weight:800}
+.faq details[open] summary:before{content:"– "}
+.faq ol{margin:10px 0 0 20px;font-size:13.5px;color:var(--sub);line-height:1.75}
+.faq .cal{display:inline-block;margin:8px 0 0}
 
 /* ── app demo (interactive prototype) ── */
 .appdemo{background:linear-gradient(160deg,#0a1a3d,#001a49 55%,#0f2a5c);color:#fff;overflow:hidden}
 .appdemo .sec-head h2{color:#fff}
 .appdemo .sec-head h2:before{background:var(--red)}
 .appdemo .sub{color:#a9c0dd;font-size:15px;max-width:64ch;margin-bottom:8px}
-.appdemo .fig{font-size:12.5px;color:#7d9ac2;margin-bottom:30px}
+.appdemo .fig{font-size:12.5px;color:#7d9ac2;margin-bottom:20px}
 .appdemo .fig a{color:#ffd9a8;text-decoration:underline}
 
 .pd-stage{display:flex;align-items:center;justify-content:center;gap:22px}
@@ -144,9 +157,9 @@ section{padding:58px 0}
 .pd-phone{width:320px;flex:none;background:#0c0c10;border-radius:46px;padding:14px;box-shadow:0 40px 80px rgba(0,10,30,.55),0 0 0 1.5px rgba(255,255,255,.08) inset}
 .pd-screen{position:relative;background:#f6f7f9;border-radius:32px;height:660px;overflow:hidden;display:flex;flex-direction:column}
 .pd-notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#0c0c10;border-radius:14px;z-index:5}
-.pd-topbar{flex:none;padding:34px 18px 12px;background:var(--navy);color:#fff}
-.pd-topbar .ttl{font-family:Georgia,serif;font-weight:700;font-size:19px}
-.pd-topbar .sub2{font-size:11.5px;color:#a9c0dd;margin-top:2px}
+.pd-topbar{flex:none;padding:34px 18px 12px;background:var(--navy);color:#fff;display:flex;align-items:center;gap:9px}
+.pd-topbar .ttl{font-weight:700;font-size:17px}
+.pd-topbar .sub2{font-size:11px;color:#a9c0dd;margin-top:1px}
 .pd-track{flex:1;display:flex;width:500%;height:100%;transition:transform .35s cubic-bezier(.4,0,.2,1)}
 .pd-pane{width:20%;height:100%;overflow-y:auto;background:#f6f7f9;padding:16px 16px 90px}
 .pd-tabbar{flex:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #e4e8ee;background:#fff;padding:8px 4px 12px}
@@ -172,10 +185,11 @@ section{padding:58px 0}
 .pd-tabs2{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto}
 .pd-tabs2 button{flex:none;border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 12px;font-size:11.5px;font-weight:700;color:var(--sub);cursor:pointer;font-family:inherit}
 .pd-tabs2 button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-.pd-nitem{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:8px}
+.pd-nitem{padding:10px 2px;border-bottom:1px solid var(--line)}
 .pd-nitem .badge{font-size:9.5px}
 .pd-nitem .t{display:block;font-size:12.5px;font-weight:700;color:#22303e;margin:5px 0 3px}
 .pd-nitem .d{font-size:10.5px;color:var(--sub)}
+.pd-nitem .cal{font-size:10px}
 
 .pd-chat{display:flex;flex-direction:column;gap:10px;padding-bottom:8px}
 .pd-bub{max-width:84%;padding:9px 12px;border-radius:14px;font-size:12.5px;line-height:1.5}
@@ -190,11 +204,12 @@ section{padding:58px 0}
 .pd-post-in{display:flex;gap:6px;margin-bottom:14px}
 .pd-post-in input{flex:1;border:1.5px solid var(--line);border-radius:20px;padding:9px 13px;font-size:12px;font-family:inherit}
 .pd-post-in button{flex:none;background:var(--red);color:#fff;border:none;border-radius:20px;padding:0 14px;font-size:11.5px;font-weight:800;cursor:pointer;font-family:inherit}
-.pd-post{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:8px}
+.pd-post{padding:10px 2px;border-bottom:1px solid var(--line)}
 .pd-post .who{font-size:11px;font-weight:800;color:var(--navy)}
 .pd-post .tx{font-size:12.5px;margin-top:3px;color:#22303e}
 .pd-post .when{font-size:10px;color:#9aa7b4;margin-top:4px}
 
+.pd-hint{font-size:11px;color:var(--sub);margin-bottom:14px;line-height:1.5}
 .pd-field{margin-bottom:12px}
 .pd-field label{display:block;font-size:10.5px;font-weight:800;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
 .pd-field input,.pd-field select{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:9px 11px;font-size:12.5px;font-family:inherit}
@@ -237,11 +252,11 @@ footer a:hover{color:#fff}
 
 <!-- utility -->
 <div class="util"><div class="wrap">
-  <a href="https://www.cycu.edu.tw/" target="_blank" rel="noopener">CYCU</a><span class="sep">|</span>
-  <a href="https://oia.cycu.edu.tw/?lang=en" target="_blank" rel="noopener">OIA</a><span class="sep">|</span>
-  <a href="#" onclick="return false">ENGLISH</a><span class="sep">|</span>
-  <a href="#" onclick="return false">中文</a><span class="sep">|</span>
-  <a href="#" onclick="return false">한국어</a>
+  <a href="https://www.cycu.edu.tw/" target="_blank" rel="noopener" title="CYCU's main university website">CYCU Home</a><span class="sep">|</span>
+  <a href="https://oia.cycu.edu.tw/?lang=en" target="_blank" rel="noopener" title="Office of International Affairs — CYCU's office for international students">OIA (Int'l Office)</a><span class="sep">|</span>
+  <a href="#" onclick="return false" title="Switch this page to English">ENGLISH</a><span class="sep">|</span>
+  <a href="#" onclick="return false" title="切換為中文">中文</a><span class="sep">|</span>
+  <a href="#" onclick="return false" title="한국어로 보기">한국어</a>
 </div></div>
 
 <!-- header -->
@@ -251,6 +266,7 @@ footer a:hover{color:#fff}
     <a href="#app" class="active">Try the App</a>
     <a href="#notices">Notice</a>
     <a href="#news">News &amp; Events</a>
+    <a href="#faq">FAQ</a>
     <a href="#ai">AI Assistant</a>
     <a href="#footer">Contact</a>
   </nav>
@@ -271,12 +287,12 @@ footer a:hover{color:#fff}
 
 <!-- quick icon menu -->
 <div class="quick"><div class="wrap">
-  <a class="qi" href="#notices"><span class="ic">📄</span>Documents</a>
-  <a class="qi" href="#notices"><span class="ic">🗓️</span>Schedule</a>
-  <a class="qi" href="#ai"><span class="ic">🌐</span>Translation</a>
-  <a class="qi" href="#news"><span class="ic">👥</span>Community</a>
-  <a class="qi" href="https://map.cycu.edu.tw/" target="_blank" rel="noopener"><span class="ic">🗺️</span>Campus Map</a>
-  <a class="qi" href="#footer"><span class="ic">🆘</span>Support</a>
+  <a class="qi" href="#notices" title="Required forms, certificates & guides">Documents</a>
+  <a class="qi" href="#notices" title="Academic calendar & important dates">Schedule</a>
+  <a class="qi" href="#ai" title="Ask CYClaude AI in English or Chinese">Translation</a>
+  <a class="qi" href="#news" title="Events & posts from other students">Community</a>
+  <a class="qi" href="https://map.cycu.edu.tw/" target="_blank" rel="noopener" title="Official CYCU campus map">Campus Map</a>
+  <a class="qi" href="#footer" title="Contact & emergency information">Support</a>
 </div></div>
 
 <!-- alert -->
@@ -298,7 +314,7 @@ footer a:hover{color:#fff}
     <div class="pd-phone">
       <div class="pd-screen">
         <div class="pd-notch"></div>
-        <div class="pd-topbar"><div class="ttl" id="pd-title">Home</div><div class="sub2">CYClaude</div></div>
+        <div class="pd-topbar"><div class="crest" style="width:26px;height:26px;font-size:12px">✝</div><div><div class="ttl" id="pd-title">Home</div><div class="sub2">CYClaude</div></div></div>
 
         <div class="pd-track" id="pd-track">
           <!-- 0 Home -->
@@ -315,7 +331,7 @@ footer a:hover{color:#fff}
             <div class="pd-forcard">
               <div class="k">For You</div>
               <h4>3 notices picked by AI</h4>
-              <p>Tell us your major &amp; interests — we'll sort what matters most.</p>
+              <p>Just ask a question — no sign-up needed.</p>
               <button onclick="pdGo(2)">Ask CYClaude →</button>
             </div>
             <div class="pd-mini">
@@ -335,12 +351,12 @@ footer a:hover{color:#fff}
               <button data-c="eve" onclick="pdTab(this)">Events</button>
             </div>
             <div id="pd-nlist">
-              <div class="pd-nitem" data-c="aca"><span class="badge b-aca">Academic</span><span class="t">115-1 Add/Drop — Business English (I)</span><span class="d">Deadline 2026-09-11</span></div>
+              <div class="pd-nitem" data-c="aca"><span class="badge b-aca">Academic</span><span class="t">115-1 Add/Drop — Business English (I)</span><span class="d">Deadline 2026-09-11</span> <a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Add%2FDrop+Deadline+-+Business+English&amp;dates=20260911/20260912&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar">＋Cal</a></div>
               <div class="pd-nitem" data-c="visa"><span class="badge b-visa">Visa·ARC</span><span class="t">Apply for your ARC within 15 days</span><span class="d">Ongoing</span></div>
-              <div class="pd-nitem" data-c="eve"><span class="badge b-eve">Event</span><span class="t">ISA Welcome Party &amp; STEM Mixer</span><span class="d">2026-08-22</span></div>
-              <div class="pd-nitem" data-c="aca"><span class="badge b-aca">Academic</span><span class="t">Fall course registration guide</span><span class="d">2026-09-01</span></div>
+              <div class="pd-nitem" data-c="eve"><span class="badge b-eve">Event</span><span class="t">ISA Welcome Party &amp; STEM Mixer</span><span class="d">2026-08-22</span> <a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=ISA+Welcome+Party&amp;dates=20260822/20260823&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar">＋Cal</a></div>
+              <div class="pd-nitem" data-c="aca"><span class="badge b-aca">Academic</span><span class="t">Fall course registration guide</span><span class="d">2026-09-01</span> <a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Fall+Course+Registration+Opens&amp;dates=20260901/20260902&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar">＋Cal</a></div>
               <div class="pd-nitem" data-c="visa"><span class="badge b-visa">Visa·ARC</span><span class="t">NHI eligibility after 6 months</span><span class="d">Notice</span></div>
-              <div class="pd-nitem" data-c="aca"><span class="badge b-aca">Academic</span><span class="t">Dormitory vacation-stay application</span><span class="d">2026-12-01</span></div>
+              <div class="pd-nitem" data-c="aca"><span class="badge b-aca">Academic</span><span class="t">Dormitory vacation-stay application</span><span class="d">2026-12-01</span> <a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Dormitory+Vacation-Stay+Application&amp;dates=20261201/20261202&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar">＋Cal</a></div>
             </div>
           </div>
 
@@ -369,12 +385,13 @@ footer a:hover{color:#fff}
 
           <!-- 4 My -->
           <div class="pd-pane">
-            <div class="pd-field"><label>Name</label><input id="pd-name" placeholder="Your name"></div>
-            <div class="pd-field"><label>Major</label>
-              <select id="pd-major"><option>Business Administration</option><option>Computer Engineering</option><option>Science</option><option>Design &amp; Arts</option><option>Other</option></select>
+            <p class="pd-hint">Everything here is optional — skip anything you're not sure about. Used only to personalize the AI tab.</p>
+            <div class="pd-field"><label>Name (optional)</label><input id="pd-name" placeholder="Your name"></div>
+            <div class="pd-field"><label>Major (optional)</label>
+              <input id="pd-major" placeholder="e.g. Business, Computer Science… or leave blank">
             </div>
-            <div class="pd-field"><label>Interests</label>
-              <select id="pd-int"><option>Making friends · community</option><option>Career · internships</option><option>Travel · food</option><option>Study · research</option></select>
+            <div class="pd-field"><label>Interests (optional)</label>
+              <select id="pd-int"><option value="">Prefer not to say</option><option>Making friends · community</option><option>Career · internships</option><option>Travel · food</option><option>Study · research</option></select>
             </div>
             <div class="pd-field"><label>Language</label>
               <select id="pd-lang"><option>English</option><option>中文</option><option>한국어</option></select>
@@ -413,12 +430,12 @@ footer a:hover{color:#fff}
           <button data-c="eve" onclick="tab(this)">Events</button>
         </div>
         <ul id="nlist">
-          <li data-c="aca" data-k="add drop business english"><span class="badge b-aca">Academic</span><span class="t">115-1 Add/Drop/Change/Retake — Business English Conversation (I)</span><span class="d">2026-09-11</span></li>
+          <li data-c="aca" data-k="add drop business english"><span class="badge b-aca">Academic</span><span class="t">115-1 Add/Drop/Change/Retake — Business English Conversation (I)</span><span class="d">2026-09-11</span><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Add%2FDrop+Deadline+-+Business+English&amp;dates=20260911/20260912&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar" onclick="event.stopPropagation()">＋Cal</a></li>
           <li data-c="visa" data-k="arc alien resident certificate"><span class="badge b-visa">Visa·ARC</span><span class="t">Apply for your ARC within 15 days of arrival — required documents</span><span class="d">Ongoing</span></li>
-          <li data-c="eve" data-k="isa welcome party stem mixer"><span class="badge b-eve">Event</span><span class="t">ISA Welcome Party &amp; STEM Mixer — this Friday</span><span class="d">2026-08-22</span></li>
-          <li data-c="aca" data-k="course registration english guide"><span class="badge b-aca">Academic</span><span class="t">Fall course registration — how to enroll (English guide)</span><span class="d">2026-09-01</span></li>
+          <li data-c="eve" data-k="isa welcome party stem mixer"><span class="badge b-eve">Event</span><span class="t">ISA Welcome Party &amp; STEM Mixer — this Friday</span><span class="d">2026-08-22</span><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=ISA+Welcome+Party&amp;dates=20260822/20260823&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar" onclick="event.stopPropagation()">＋Cal</a></li>
+          <li data-c="aca" data-k="course registration english guide"><span class="badge b-aca">Academic</span><span class="t">Fall course registration — how to enroll (English guide)</span><span class="d">2026-09-01</span><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Fall+Course+Registration+Opens&amp;dates=20260901/20260902&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar" onclick="event.stopPropagation()">＋Cal</a></li>
           <li data-c="visa" data-k="national health insurance nhi group"><span class="badge b-visa">Visa·ARC</span><span class="t">NHI after 6 months — interim group insurance notice</span><span class="d">Notice</span></li>
-          <li data-c="aca" data-k="dormitory vacation stay"><span class="badge b-aca">Academic</span><span class="t">Dormitory vacation-stay application</span><span class="d">2026-12-01</span></li>
+          <li data-c="aca" data-k="dormitory vacation stay"><span class="badge b-aca">Academic</span><span class="t">Dormitory vacation-stay application</span><span class="d">2026-12-01</span><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Dormitory+Vacation-Stay+Application&amp;dates=20261201/20261202&amp;details=Reminder+from+CYClaude" target="_blank" rel="noopener" title="Add to Google Calendar" onclick="event.stopPropagation()">＋Cal</a></li>
         </ul>
       </div>
     </div>
@@ -433,34 +450,52 @@ footer a:hover{color:#fff}
   </div>
 </div></section>
 
+<!-- FAQ (common questions, step-by-step) -->
+<section id="faq" style="background:#fff"><div class="wrap">
+  <div class="sec-head"><h2>Common Questions</h2></div>
+  <div class="faq">
+    <details>
+      <summary>How do I apply for my ARC (Alien Resident Certificate)?</summary>
+      <ol>
+        <li>Prepare your passport, one photo, and your enrollment certificate.</li>
+        <li>Visit the household registration office within 15 days of arrival.</li>
+        <li>Pay the fee if required, then collect your ARC.</li>
+      </ol>
+      <a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=ARC+Application+Reminder&amp;details=Apply+within+15+days+of+arrival+-+CYClaude" target="_blank" rel="noopener" title="Add a reminder to Google Calendar">＋ Add reminder to calendar</a>
+    </details>
+    <details>
+      <summary>How do I get health insurance (NHI)?</summary>
+      <ol>
+        <li>For your first 6 months, you're covered by the school's group insurance.</li>
+        <li>After 6 months, apply for National Health Insurance (NHI) at a district office.</li>
+        <li>Bring your ARC and enrollment certificate.</li>
+      </ol>
+    </details>
+    <details>
+      <summary>How do I register for Fall courses?</summary>
+      <ol>
+        <li>Check the add/drop period dates on the Notice board above.</li>
+        <li>Log in to the course registration system with your student ID.</li>
+        <li>Select your courses and confirm before the deadline.</li>
+      </ol>
+    </details>
+  </div>
+  <p style="font-size:12.5px;color:var(--sub);margin-top:14px">Don't see your question? Ask <a href="#ai" style="color:var(--blue);text-decoration:underline">CYClaude AI</a> below.</p>
+</div></section>
+
 <!-- AI assistant (LIVE Gemini) -->
 <section class="ai-sec" id="ai"><div class="wrap">
   <div class="ai-grid">
     <div>
       <div class="kick">Powered by Gemini</div>
       <h2>Ask CYClaude</h2>
-      <p>Tell us who you are, and our AI picks the notices that matter most to <b>you</b> — sorted by relevance and deadline. Works 24/7, in English or Chinese.</p>
-      <p style="margin-top:12px;font-size:13px;color:#9fb9dd">※ Live demo — runs on Google Gemini (free tier) via a secure serverless function. If the API key isn't configured, a demo response is shown.</p>
+      <p>Just ask — no sign-up or quiz needed. Our AI picks the notices that matter most, sorted by relevance and deadline. Works 24/7, in English or Chinese.</p>
+      <p style="margin-top:12px;font-size:13px;color:#9fb9dd">※ Live demo — runs on Google Gemini (free tier) via a secure serverless function. If the API key isn't configured, a demo response is shown. Set an optional profile in the app prototype's <a href="#app" style="color:#ffd9a8">My tab</a> for more tailored answers.</p>
     </div>
     <div class="ai-form">
-      <label>Major</label>
-      <select id="p-major">
-        <option>Business Administration</option>
-        <option>Computer Engineering</option>
-        <option>Science</option>
-        <option>Design &amp; Arts</option>
-        <option>Other</option>
-      </select>
-      <label>Interests</label>
-      <select id="p-int">
-        <option>Making friends · community</option>
-        <option>Career · internships</option>
-        <option>Travel · food</option>
-        <option>Study · research</option>
-      </select>
-      <label>Question (optional)</label>
-      <input id="p-q" placeholder="e.g. What's urgent for me this week?">
-      <button class="ai-run" id="run" onclick="askAI()">🔍 Find my notices</button>
+      <label>Ask anything</label>
+      <input id="p-q" placeholder="e.g. What's urgent for me this week? / How do I apply for ARC?">
+      <button class="ai-run" id="run" onclick="askAI()">🔍 Ask CYClaude</button>
       <div class="ai-out" id="out"></div>
       <div class="ai-mode" id="mode"></div>
     </div>
@@ -471,7 +506,7 @@ footer a:hover{color:#fff}
 <footer id="footer"><div class="wrap">
   <div class="fcols">
     <div>
-      <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px"><div class="crest">✝</div><div><div style="color:#fff;font-family:Georgia,serif;font-weight:700;font-size:18px">CYClaude</div><div style="font-size:11px;color:#9fb4cc;letter-spacing:.06em">INTERNATIONAL STUDENT PORTAL</div></div></div>
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px"><div class="crest">✝</div><div><div style="color:#fff;font-weight:700;font-size:18px">CYClaude</div><div style="font-size:11px;color:#9fb4cc;letter-spacing:.06em">INTERNATIONAL STUDENT PORTAL</div></div></div>
       <p style="color:#9fb4cc">No.200, Zhongbei Rd., Zhongli Dist.,<br>Taoyuan City 320314, Taiwan (R.O.C.)</p>
     </div>
     <div><h4>Contact</h4>
@@ -508,7 +543,8 @@ document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>d
 async function askAI(){
   var btn=document.getElementById('run'),out=document.getElementById('out'),mode=document.getElementById('mode');
   btn.disabled=true;btn.textContent='Thinking…';out.innerHTML='';mode.textContent='';
-  var profile={major:val('p-major'),interests:val('p-int'),arrival:'2026-08'};
+  var saved=null; try{saved=JSON.parse(localStorage.getItem('cyclaude_profile')||'null');}catch(e){}
+  var profile={major:(saved&&saved.major)||'',interests:(saved&&saved.interests)||'',arrival:'2026-08'};
   var q=document.getElementById('p-q').value||'';
   try{
     var r=await fetch('/api/notices',{method:'POST',headers:{'Content-Type':'application/json'},
@@ -591,8 +627,8 @@ function localDemo(p){
     chat.insertAdjacentHTML('beforeend','<div class="pd-bub bot" id="pd-thinking">Thinking…</div>');
     chat.scrollTop=chat.scrollHeight;
     var profile={
-      major:($('pd-major')&&$('pd-major').value)||'Business Administration',
-      interests:($('pd-int')&&$('pd-int').value)||'Making friends · community',
+      major:($('pd-major')&&$('pd-major').value)||'',
+      interests:($('pd-int')&&$('pd-int').value)||'',
       arrival:'2026-08'
     };
     fetch('/api/notices',{method:'POST',headers:{'Content-Type':'application/json'},

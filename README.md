@@ -15,6 +15,8 @@ CYCU 교환·국제학생의 **정보 부족 문제**를 해결하는 웹 포털
 
 🆕 **랜딩페이지 안에 인터랙티브 앱 프로토타입이 들어있습니다.** 히어로 영역의 "↓ Try the interactive app prototype" 버튼(또는 상단 메뉴의 **Try the App**)을 누르면 폰 목업이 나오고, Home / Notice / AI / Community / My 5개 화면을 실제로 탭·화살표·스와이프로 눌러보며 앱처럼 테스트할 수 있어요. AI 탭은 실제 `/api/notices`와 연동됩니다.
 
+🛠️ **유저 피드백 반영 업데이트**: 전공을 몰라도 되도록 AI 질문 폼에서 전공 선택을 없애고 자유 질문 위주로 단순화, 배지·카드 등 박스 디자인을 정리해 더 깔끔하게, 본문 여백을 줄여 스크롤을 덜 하도록, 단계별 안내가 있는 **자주 묻는 질문(FAQ)** 섹션 추가, 마감일 있는 공지에 **구글 캘린더 추가(＋Cal)** 버튼 추가.
+
 ### 파일 구조 (뭘 고치면 되나?)
 | 파일 | 내용 | 이런 걸 고치고 싶을 때 |
 |---|---|---|
@@ -65,6 +67,8 @@ Our collaboration goal: **edit and improve the design and basic features of this
 
 🆕 **The landing page has an interactive app prototype built in.** Click the "↓ Try the interactive app prototype" button in the hero (or **Try the App** in the top menu) to open a phone mock-up with 5 real, tappable screens — Home / Notice / AI / Community / My — navigable by tabs, arrows, or swipe. The AI tab calls the real `/api/notices` endpoint.
 
+🛠️ **Updated based on user feedback**: removed the major/college dropdown from the AI form (some students weren't sure what to pick) in favor of a simple free-text question, flattened badges/cards for a cleaner look, tightened spacing so the page needs less scrolling, added a step-by-step **FAQ** section, and added **"＋Cal" (add to Google Calendar)** links on notices with real deadlines.
+
 ### File map (what should I edit?)
 | File | What it is | Edit this when… |
 |---|---|---|
@@ -108,6 +112,8 @@ Press **`.`** (period) on the repo page → VS Code opens in the browser. Use th
 協作目標：**共同修改、改進這個現有網頁的設計與基本功能。**
 
 🆕 **首頁內建了可互動的 App 原型。** 點擊主視覺區的「↓ Try the interactive app prototype」按鈕（或上方選單的 **Try the App**）就會打開手機模擬畫面，Home／Notice／AI／Community／My 五個畫面都可以用分頁、箭頭或滑動實際操作測試。AI 分頁會實際呼叫 `/api/notices`。
+
+🛠️ **根據使用者回饋更新**：AI 詢問表單移除了主修／學院選單（有些學生不確定自己該選哪個），改成直接輸入問題；徽章、卡片等方框設計簡化得更乾淨；縮小版面留白，減少滑動次數；新增有步驟說明的 **常見問題（FAQ）** 區塊；有明確期限的公告新增 **「＋Cal」加入 Google 日曆** 連結。
 
 ### 檔案說明（要改哪裡？）
 | 檔案 | 內容 | 什麼時候改 |
