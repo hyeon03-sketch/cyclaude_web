@@ -152,6 +152,7 @@ Press **`.`** (period) on the repo page → VS Code opens in the browser. Use th
 ---
 
 ### ⚙️ For maintainers
+- 팀 작업 분담(피그마팀/웹팀 협업 규칙)은 **[COLLABORATION.md](./COLLABORATION.md)** 참고
 - Deployed on **Vercel** (auto-deploy on every push to `main`)
 - AI: set `GEMINI_API_KEY` in Vercel → Settings → Environment Variables (free key from [aistudio.google.com](https://aistudio.google.com)); without a key the assistant falls back to demo mode
 - © 2026 Team 7 · HGU × CYCU GRP — student project (unofficial)
